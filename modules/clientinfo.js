@@ -1,6 +1,6 @@
 const { platform } = require("os");
 
-function getClientInfo(req) {
+function getClientInfo(req) { // Função para obter informações do cliente
     const rawUserAgent = req.headers['user-agent'] || 'Desconhecido';
     const language = req.headers['accept-language']
         ? req.headers['accept-language'].split(',')[0]

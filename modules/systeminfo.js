@@ -1,13 +1,13 @@
 const os = require('os');
 
-function getSystemInfo() {
+function getSystemInfo() { // Função para obter informações do sistema
     const totalMem = os.totalmem();
     const freeMem = os.freemem();
     const usedMemPercent = (((totalMem - freeMem) / totalMem) * 100).toFixed(2);
 
     const cpus = os.cpus();
 
-    return {
+    return { // Retorna um objeto com as informações do sistema
         hostname: os.hostname(),
         platform: os.platform(),
         architecture: os.arch(),
